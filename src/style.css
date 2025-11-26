@@ -1,0 +1,862 @@
+/* --- ALAP BEÁLLÍTÁSOK (RESET) --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff; /* Alap háttér legyen fehér */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+
+/* --- FEJLÉC --- */
+header {
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  top: 0;
+  left: 0;
+  z-index: 9999; /* Legyen mindig legfelül */
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0056b3;
+}
+
+.logo span {
+  color: #333;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #0056b3;
+}
+
+/* --- KEZDŐLAP (HERO) --- */
+#kezdolap {
+  /* Háttérkép beállítása */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+    url("hero_landing.png");
+  background-size: cover;
+  background-position: center;
+
+  /* Méretezés */
+  width: 100%;
+  height: 70vh; /* Teljes képernyő */
+  min-height: 600px; /* Hogy mobilon se legyen túl kicsi */
+
+  /* Tartalom középre igazítása */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+
+  /* Fontos: padding a fejléc miatt */
+  padding-top: 70px;
+  position: relative;
+  z-index: 1;
+}
+
+#kezdolap h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Olvashatóság miatt árnyék */
+}
+
+#kezdolap p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+  background: #0056b3;
+  color: #fff;
+  padding: 12px 35px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: #004494;
+}
+
+/* --- RÓLUNK SZEKCIÓ (EZT JAVÍTOTTUK) --- */
+#rolunk {
+  /* Kényszerített fehér háttér, hogy ne legyen átlátszó */
+  background-color: #ffffff !important;
+  padding: 80px 20px;
+
+  /* Rétegezés: fedje el az alatta lévő dolgokat */
+  position: relative;
+  z-index: 10;
+}
+
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  background-color: #fff; /* Biztonság kedvéért itt is */
+}
+
+.about-content {
+  flex: 1;
+}
+
+.sub-title {
+  display: block;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #0056b3;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+#rolunk h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.lead-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+#rolunk p {
+  margin-bottom: 20px;
+  color: #666;
+  text-align: justify;
+}
+
+.btn-text {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 700;
+  color: #0056b3;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  min-height: 400px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+/* --- MUNKÁINK (PORTFOLIO) --- */
+#munkaink {
+  background-color: #f4f4f4; /* Szürke háttér */
+  padding: 80px 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-desc {
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* --- KONTAKT --- */
+#kontakt {
+  background-color: #fff;
+  padding: 80px 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.contact-info,
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-item {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: #0056b3;
+  margin-right: 15px;
+  width: 30px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-group textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+/* --- LÁBLÉC --- */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* --- MOBIL NÉZET (Reszponzivitás) --- */
+@media (max-width: 900px) {
+  .header-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  nav ul {
+    margin-top: 10px;
+  }
+
+  #kezdolap h1 {
+    font-size: 2rem;
+  }
+
+  /* Kép és szöveg egymás alá kerüljön mobilon */
+  .about-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+  }
+}
+
+/* --- ÚJ ALOLDAL FEJLÉC (Referencia oldal) --- */
+.page-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center;
+  height: 300px; /* Kisebb, mint a főoldali Hero */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding-top: 70px; /* Header helye */
+  margin-bottom: 50px;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* --- MASONRY GALÉRIA STÍLUS --- */
+#galeria-page {
+  padding-bottom: 80px;
+}
+
+.masonry-grid {
+  /* CSS Columns használata a Pinterest-szerű hatáshoz */
+  column-count: 3;
+  column-gap: 20px;
+}
+
+.masonry-item {
+  /* Megakadályozza, hogy a képet félbevágja az oszlop törés */
+  break-inside: avoid;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.masonry-item:hover {
+  transform: translateY(-5px); /* Kicsit megemelkedik rámutatáskor */
+}
+
+.masonry-item img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* Reszponzivitás a galériához */
+@media (max-width: 900px) {
+  .masonry-grid {
+    column-count: 2; /* Tableten 2 oszlop */
+  }
+}
+
+@media (max-width: 600px) {
+  .masonry-grid {
+    column-count: 1; /* Mobilon 1 oszlop */
+  }
+}
+
+/* --- LIGHTBOX (NAGYÍTOTT GALÉRIA) STÍLUSOK --- */
+
+.lightbox {
+  display: none; /* Alapból rejtve van */
+  position: fixed;
+  z-index: 10000; /* Minden felett legyen */
+  padding-top: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9); /* Sötét, átlátszó háttér */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* A nagyított kép */
+.lightbox-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 1000px; /* Ne legyen túl nagy */
+  max-height: 80vh; /* Hogy beférjen a képernyőre */
+  object-fit: contain;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  animation: zoomIn 0.3s; /* Kis animáció megjelenéskor */
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Kép alatti szöveg (az alt tagből jön) */
+.caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+  font-size: 1.1rem;
+}
+
+/* Bezárás gomb (X) */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+  z-index: 10001;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Előző és Következő nyilak */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.3); /* Halvány háttér a nyilaknak */
+}
+
+/* Jobb oldali nyíl pozicionálása */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Bal oldali nyíl */
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Hover effekt a nyilakon */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Mobil nézet igazítás */
+@media only screen and (max-width: 700px) {
+  .lightbox-content {
+    width: 100%;
+  }
+  .prev,
+  .next {
+    padding: 10px;
+    font-size: 20px;
+  }
+}
+/* --- TERMÉK KATALÓGUS (GRID) --- */
+.product-grid {
+  display: grid;
+  /* Automatikusan rendezi a kártyákat: min. 280px szélesek, kitöltik a helyet */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding-bottom: 50px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid #eee;
+}
+
+.product-card:hover {
+  transform: translateY(-10px); /* Kiemelkedik hoverre */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-color: #0056b3;
+}
+
+.card-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .card-image img {
+  transform: scale(1.1); /* Kép nagyítása hoverre */
+}
+
+.card-content {
+  padding: 20px;
+  flex-grow: 1; /* Hogy a szöveg kitöltse a maradék helyet */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.btn-arrow {
+  color: #0056b3;
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+.btn-arrow i {
+  margin-left: 5px;
+  transition: margin-left 0.3s;
+}
+
+.product-card:hover .btn-arrow i {
+  margin-left: 10px;
+}
+
+/* --- TERMÉK ALOLDAL (RÉSZLETEK) --- */
+#termek-reszletek {
+  padding-top: 100px; /* Hogy ne takarja ki a fejléc */
+  padding-bottom: 80px;
+  background-color: #fff;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: #666;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.back-link:hover {
+  color: #0056b3;
+}
+
+.product-detail-wrapper {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.product-detail-image {
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-detail-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-detail-info {
+  flex: 1;
+}
+
+.product-detail-info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.feature-list {
+  margin: 30px 0;
+  list-style: none;
+}
+
+.feature-list li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+.feature-list li i {
+  color: #0056b3;
+  margin-right: 15px;
+}
+
+.cta-box {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  border-left: 5px solid #0056b3;
+  margin-top: 30px;
+}
+
+.cta-box p {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Reszponzivitás a termék oldalhoz */
+@media (max-width: 900px) {
+  .product-detail-wrapper {
+    flex-direction: column;
+  }
+
+  .product-detail-image {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+/* --- TERMÉK ALOLDAL SPECIFIKUS STÍLUSOK --- */
+
+.product-intro {
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+}
+
+.energy-box {
+  background-color: #f0f8ff; /* Halványkék háttér */
+  border: 1px solid #cceeff;
+  padding: 25px;
+  border-radius: 8px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.energy-box h3 {
+  color: #0056b3;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Előnyök rács (Grid) */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-bottom: 60px;
+}
+
+.feature-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s;
+  border-top: 4px solid #0056b3;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card i {
+  font-size: 2.5rem;
+  color: #0056b3;
+  margin-bottom: 15px;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+  margin: 50px 0;
+}
+
+.variants-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+/* --- TERMÉK VARIÁCIÓK (S8000, S9000, Linear) --- */
+.product-variant {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 80px; /* Távolság a termékek között */
+}
+
+/* Fordított sorrend (kép jobbra, szöveg balra) */
+.product-variant.reverse {
+  flex-direction: row-reverse;
+}
+
+.variant-image {
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.variant-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.product-variant:hover .variant-image img {
+  transform: scale(1.03);
+}
+
+.variant-info {
+  flex: 1;
+}
+
+.variant-info h3 {
+  font-size: 1.8rem;
+  color: #0056b3;
+  margin-bottom: 5px;
+}
+
+.variant-info .subtitle {
+  display: block;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.variant-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.variant-list li {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.variant-list li i {
+  color: #28a745; /* Zöld pipa */
+  margin-right: 10px;
+}
+
+.variant-list.compact li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.highlight-box {
+  background: #fff3cd; /* Halványsárga */
+  color: #856404;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 20px 0;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* CTA szekció az alján */
+.cta-section {
+  text-align: center;
+  background: #f8f9fa;
+  padding: 50px;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+
+.btn-large {
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+/* Reszponzivitás - Mobilon minden egymás alá kerül */
+@media (max-width: 900px) {
+  .product-variant,
+  .product-variant.reverse {
+    flex-direction: column;
+    text-align: left;
+    gap: 20px;
+  }
+
+  .variant-image {
+    width: 100%;
+  }
+}
