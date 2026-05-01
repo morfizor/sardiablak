@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bejárati Ajtók - Sardiablak</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="src/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/fav/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="src/fav/apple-touch-icon.png">
+    <link rel="icon" href="src/fav/favicon.ico">
+    <style>
+      .pdf-download-box {
+        background: #f0f7ff;
+        border: 2px solid #0056b3;
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        margin: 40px 0;
+      }
+      .pdf-download-box h3 {
+        margin-bottom: 15px;
+        color: #0056b3;
+      }
+      .btn-pdf {
+        background: #0056b3;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 5px;
+        font-weight: bold;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.3s;
+      }
+      .btn-pdf:hover {
+        background: #004494;
+        transform: scale(1.05);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- FEJLÉC -->
+    <header>
+      <div class="container header-container">
+        <a href="index.html" class="logo">SARDI<span>ABLAK</span></a>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Kezdőlap</a></li>
+            <li><a href="termekeink.html" class="active">Termékek</a></li>
+            <li><a href="referencia.html">Referencia</a></li>
+            <li><a href="index.html#kontakt">Kapcsolat</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ALOLDAL HERO SZEKCIÓ -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Bejárati Ajtók</h1>
+        <p>Biztonság és stílus az otthona kapujában</p>
+      </div>
+    </section>
+
+    <!-- TARTALOM SZEKCIÓ -->
+    <section id="product-page">
+      <div class="container">
+        <!-- Vissza gomb -->
+        <a href="termekeink.html" class="back-link"><i class="fas fa-arrow-left"></i> Vissza a termékekhez</a>
+
+        <!-- Általános bevezető -->
+        <div class="product-intro">
+          <h2>Műanyag bejárati ajtók – Esztétika és Funkcionalitás</h2>
+          <p class="lead-text">
+            Fedezze fel modern műanyag bejárati ajtóinkat, melyek kiemelkedő hő- és hangszigeteléssel, valamint hosszú élettartammal rendelkeznek. A különböző panelvariációknak köszönhetően ajtaja nemcsak funkcionális, hanem lakása éke is lehet.
+          </p>
+          
+          <div class="energy-box">
+            <h3><i class="fas fa-shield-alt"></i> Biztonság és védelem</h3>
+            <p>
+                Termékeink nemcsak esztétikusak, hanem a legmagasabb biztonsági követelményeknek is megfelelnek. Az erősített profilrendszerek és a többpontos záródási mechanizmusok garantálják az Ön és családja nyugalmát, miközben az ajtók kiválóan ellenállnak az időjárás viszontagságainak.
+            </p>
+          </div>
+        </div>
+
+        <!-- Előnyök ikonokkal (Grid) -->
+        <div class="features-grid reveal">
+            <div class="feature-card">
+                <i class="fas fa-thermometer-half"></i>
+                <h3>Hőszigetelés</h3>
+                <p>Kiemelkedő energetikai mutatók, melyek hozzájárulnak otthona rezsiköltségének csökkentéséhez.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-volume-down"></i>
+                <h3>Hangszigetelés</h3>
+                <p>Zárja ki a külvilág zajait, és élvezze otthona csendjét a modern tömítési rendszerekkel.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-palette"></i>
+                <h3>Egyedi panelek</h3>
+                <p>Választható stílusos panelek széles választéka, hogy otthona bejárata igazán egyedi legyen.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-hand-sparkles"></i>
+                <h3>Tartósság</h3>
+                <p>Könnyen karbantartható felületek, melyek hosszú évtizedekig megőrzik eredeti fényüket.</p>
+            </div>
+        </div>
+
+        <!-- PDF Katalógus Szekció -->
+        <div class="pdf-download-box">
+            <h3>S-Line Panelkatalógus</h3>
+            <p>Válasszon stílusos paneleink közül! Töltse le teljes S-Line katalógusunkat a részletekért:</p>
+            <a href="media/Termekink/S-line-katalogus-2020-1.pdf" target="_blank" class="btn-pdf">
+                <i class="fas fa-book-open"></i> S-Line Katalógus Letöltése (PDF)
+            </a>
+        </div>
+
+        <hr class="divider">
+
+        <!-- TERMÉK VARIÁCIÓK / RÉSZLETEK -->
+        <h2 class="variants-title">Válasszon stílusának megfelelően</h2>
+
+        <div class="product-variant reveal">
+            <div class="variant-image">
+                <img src="media/Termekink/bejarati_ajto_hero.png" alt="Modern műanyag bejárati ajtó">
+            </div>
+            <div class="variant-info">
+                <h3>Személyre szabható megjelenés</h3>
+                <p>Legyen szó klasszikus vagy modern stílusról, műanyag bejárati ajtóink minden igényt kielégítenek. A panelvariációk, üvegezési opciók és színek kombinálásával teljesen egyedi bejáratot alkothatunk.</p>
+                <ul class="variant-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Sokszínűség:</strong> Számos dekorfólia és szín közül választhat.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Biztonsági vasalat:</strong> Többpontos biztonsági zárrendszerek alapfelszereltségként.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Hőhídmentes küszöb:</strong> Alumínium hőhídmentes küszöb a tökéletes szigetelésért.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Díszüvegezés:</strong> Különböző katedrál- és díszüvegek a privát szféra megőrzéséért.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CTA Gomb -->
+        <div class="cta-section">
+            <h2>Kérjen ingyenes felmérést!</h2>
+            <p>Segítünk kiválasztani az otthonához legjobban illő bejárati ajtót.</p>
+            <a href="index.html#kontakt" class="btn btn-large">Ajánlatkérés Küldése</a>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2023 Sardiablak Kft. Minden jog fenntartva.</p>
+    </footer>
+    <script src="src/script.js"></script>
+  </body>
+</html>

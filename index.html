@@ -19,12 +19,16 @@
 
     <!-- CSS összekapcsolása -->
     <link rel="stylesheet" href="src/style.css" />
+
+    <!-- PERFORMANCE: Preload hero image -->
+    <link rel="preload" href="media/WEBP/hero_landing.webp" as="image">
   </head>
   <body>
     <!-- FEJLÉC -->
     <header>
       <div class="container header-container">
         <a href="#kezdolap" class="logo">SARDI<span>ABLAK</span></a>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
         <nav>
           <ul>
             <li><a href="#kezdolap">Kezdőlap</a></li>
@@ -76,11 +80,11 @@
     </section>
 
     <!-- RÓLUNK SZEKCIÓ -->
-    <section id="rolunk">
+    <section id="rolunk" class="blob-section">
       <div class="container">
         <div class="about-wrapper">
           <!-- Bal oldal: Szöveg -->
-          <div class="about-content">
+          <div class="about-content reveal-left">
             <span class="sub-title">Kik vagyunk mi?</span>
             <h2>Több mint 10 év tapasztalat az ablakbeépítésben</h2>
             <p class="lead-text">
@@ -100,7 +104,7 @@
           </div>
 
           <!-- Jobb oldal: Kép -->
-          <div class="about-image">
+          <div class="about-image reveal-right">
             <img
               src="media/WEBP/IMG_2352.webp"
               alt="Ablakbeépítő szakember munkában"
@@ -118,28 +122,28 @@
         <!-- -->
         <div class="gallery">
           <!--  -->
-          <div class="gallery-item">
-            <img src="media/WEBP/IMG_2353.webp" alt="Ablakcsere" />
+          <div class="gallery-item reveal">
+            <img src="media/WEBP/IMG_2353.webp" alt="Ablakcsere" loading="lazy" />
             <div class="gallery-desc">Családi ház ablakcsere</div>
           </div>
-          <div class="gallery-item">
-            <img src="media/WEBP/IMG_3402.webp" alt="Erkély" />
+          <div class="gallery-item reveal">
+            <img src="media/WEBP/IMG_3402.webp" alt="Erkély" loading="lazy" />
             <div class="gallery-desc">Erkélyajtó beépítés</div>
           </div>
-          <div class="gallery-item">
-            <img src="media/WEBP/IMG_3412.webp" alt="Redőny" />
+          <div class="gallery-item reveal">
+            <img src="media/WEBP/IMG_3412.webp" alt="Redőny" loading="lazy" />
             <div class="gallery-desc">Redőny szerelés</div>
           </div>
-          <div class="gallery-item">
-            <img src="media/WEBP/IMG_2499.webp" alt="Redőny" />
+          <div class="gallery-item reveal">
+            <img src="media/WEBP/IMG_2499.webp" alt="Redőny" loading="lazy" />
             <div class="gallery-desc">Redőny szerelés</div>
           </div>
-          <div class="gallery-item">
-            <img src="media/WEBP/IMG_3392.webp" alt="Redőny" />
+          <div class="gallery-item reveal">
+            <img src="media/WEBP/IMG_3392.webp" alt="Redőny" loading="lazy" />
             <div class="gallery-desc">Redőny szerelés</div>
           </div>
-          <div class="gallery-item">
-            <img src="media/WEBP/IMG_2500.webp" alt="Redőny" />
+          <div class="gallery-item reveal">
+            <img src="media/WEBP/IMG_2500.webp" alt="Redőny" loading="lazy" />
             <div class="gallery-desc">Redőny szerelés</div>
           </div>
         </div>
@@ -152,7 +156,7 @@
     </section>
 
     <!-- KONTAKT SZEKCIÓ -->
-    <section id="kontakt">
+    <section id="kontakt" class="blob-section">
       <div class="container">
         <h2 class="section-title">Lépjen Velünk Kapcsolatba</h2>
         <div class="contact-wrapper">
@@ -168,7 +172,7 @@
               <i class="fas fa-envelope"></i>
               <div>
                 <h3>Email</h3>
-                <p>info@sardiablak.hu</p>
+                <p>sardiablakweb@gmail.com</p>
               </div>
             </div>
             <div class="contact-item">
@@ -181,20 +185,21 @@
           </div>
 
           <div class="contact-form">
-            <form action="#" method="post">
+            <form id="contact-form" action="https://formspree.io/f/xvonzonw" method="POST">
               <div class="form-group">
-                <input type="text" placeholder="Az Ön neve" required />
+                <input type="text" name="name" placeholder="Az Ön neve" required />
               </div>
               <div class="form-group">
-                <input type="email" placeholder="Email címe" required />
+                <input type="email" name="email" placeholder="Email címe" required />
               </div>
               <div class="form-group">
-                <input type="tel" placeholder="Telefonszáma" />
+                <input type="tel" name="phone" placeholder="Telefonszáma" />
               </div>
               <div class="form-group">
-                <textarea placeholder="Miben segíthetünk?" required></textarea>
+                <textarea name="message" placeholder="Miben segíthetünk?" required></textarea>
               </div>
-              <button type="submit" class="btn">Üzenet Küldése</button>
+              <button type="submit" id="submit-btn" class="btn">Üzenet Küldése</button>
+              <div id="form-status" style="margin-top: 15px; font-weight: bold; display: none;"></div>
             </form>
           </div>
         </div>
@@ -205,5 +210,6 @@
     <footer>
       <p>&copy; 2023 Sardiablak Kft. Minden jog fenntartva.</p>
     </footer>
+    <script src="src/script.js"></script>
   </body>
 </html>

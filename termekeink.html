@@ -14,6 +14,10 @@
     />
     <link rel="stylesheet" href="src/style.css" />
     <link rel="stylesheet" href="src/style.css" />
+    
+    <!-- PERFORMANCE: Preload header image -->
+    <link rel="preload" href="src/katalogus.png" as="image">
+    
     <link
       rel="icon"
       type="image/png"
@@ -38,6 +42,7 @@
     <header>
       <div class="container header-container">
         <a href="index.html" class="logo">SARDI<span>ABLAK</span></a>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
         <nav>
           <ul>
             <li><a href="index.html">Kezdőlap</a></li>
@@ -52,7 +57,7 @@
     </header>
 
     <!-- ALOLDAL FEJLÉC -->
-    <section class="page-header" ;>
+    <section class="page-header">
       <div class="container">
         <h1>Termékkínálatunk</h1>
         <p>Minőségi nyílászárók és árnyékolástechnikai megoldások</p>
@@ -64,11 +69,12 @@
       <div class="container">
         <div class="product-grid">
           <!-- 1. Termék -->
-          <a href="muanyag_nyilaszarok.html" class="product-card">
+          <a href="muanyag_nyilaszarok.html" class="product-card reveal">
             <div class="card-image">
               <img
                 src="media/Termekink/katalogus-cards/muanyag_homlokzati_nyilaszarok.png"
-                alt="Műanyag ablak"
+                alt="Termék kép"
+                loading="lazy"
               />
             </div>
             <div class="card-content">
@@ -80,7 +86,7 @@
           </a>
 
           <!-- 2. Termék -->
-          <a href="fa_nyilaszarok.html" class="product-card">
+          <a href="fa_nyilaszarok.html" class="product-card reveal">
             <div class="card-image">
               <img
                 src="media/Termekink/katalogus-cards/fa_nyilaszarok.png"
@@ -96,7 +102,7 @@
           </a>
 
           <!-- 3. Termék -->
-          <a href="#" class="product-card">
+          <a href="aluminium_nyilaszarok.html" class="product-card reveal">
             <div class="card-image">
               <img
                 src="media/Termekink/katalogus-cards/aluminium_nyilaszarok.png"
@@ -112,7 +118,7 @@
           </a>
 
           <!-- 4. Termék -->
-          <a href="#" class="product-card">
+          <a href="bejarati_ajtok.html" class="product-card reveal">
             <div class="card-image">
               <img
                 src="media/Termekink/katalogus-cards/bejarati_ajtok.png"
@@ -128,7 +134,7 @@
           </a>
 
           <!-- 5. Termék -->
-          <a href="#" class="product-card">
+          <a href="#" class="product-card reveal">
             <div class="card-image">
               <img
                 src="media/Termekink/katalogus-cards/emelo_tolo_ajto.png"
@@ -144,7 +150,7 @@
           </a>
 
           <!-- 6. Termék -->
-          <a href="#" class="product-card">
+          <a href="redonyok.html" class="product-card reveal">
             <div class="card-image">
               <img
                 src="media/Termekink/katalogus-cards/redonyok.png"
@@ -160,7 +166,7 @@
           </a>
 
           <!-- 7. Termék -->
-          <a href="#" class="product-card">
+          <a href="#" class="product-card reveal">
             <div class="card-image">
               <img
                 src="media/Termekink/katalogus-cards/zsaluziak.png"
@@ -176,7 +182,7 @@
           </a>
 
           <!-- 8. Termék -->
-          <a href="#" class="product-card">
+          <a href="#" class="product-card reveal">
             <div class="card-image">
               <img
                 src="media/Termekink/katalogus-cards/terasz_arnyekolok.png"
@@ -192,7 +198,7 @@
           </a>
 
           <!-- 9. Termék -->
-          <a href="#" class="product-card">
+          <a href="#" class="product-card reveal">
             <div class="card-image">
               <img
                 src="media/Termekink/katalogus-cards/rovarhalok.png"
@@ -208,7 +214,7 @@
           </a>
 
           <!-- 10. Termék -->
-          <a href="#" class="product-card">
+          <a href="#" class="product-card reveal">
             <div class="card-image">
               <img
                 src="media/Termekink/katalogus-cards/redony_motorok.png"
@@ -224,7 +230,7 @@
           </a>
 
           <!-- 11. Termék -->
-          <a href="#" class="product-card">
+          <a href="#" class="product-card reveal">
             <div class="card-image">
               <img
                 src="media/Termekink/katalogus-cards/okoshaz_rendszerek.png"
@@ -240,7 +246,7 @@
           </a>
 
           <!-- 12. Termék -->
-          <a href="#" class="product-card">
+          <a href="belteri_dekor_ajtok.html" class="product-card reveal">
             <div class="card-image">
               <img
                 src="media/Termekink/katalogus-cards/belteri_dekor_ajtok.png"
@@ -256,7 +262,7 @@
           </a>
 
           <!-- 13. Termék -->
-          <a href="#" class="product-card">
+          <a href="belteri_cpl_ajtok.html" class="product-card reveal">
             <div class="card-image">
               <img
                 src="media/Termekink/katalogus-cards/belteri_cpl_ajtok.png"
@@ -272,7 +278,7 @@
           </a>
 
           <!-- 14. Termék -->
-          <a href="#" class="product-card">
+          <a href="belteri_mdf_festett_ajtok.html" class="product-card reveal">
             <div class="card-image">
               <img
                 src="media/Termekink/katalogus-cards/belteri_mdf_festett_ajtok.png"
@@ -288,7 +294,7 @@
           </a>
 
           <!-- 15. Termék -->
-          <a href="#" class="product-card">
+          <a href="#" class="product-card reveal">
             <div class="card-image">
               <img
                 src="media/Termekink/katalogus-cards/garazskapuk.png"
@@ -304,7 +310,7 @@
           </a>
 
           <!-- 16. Termék -->
-          <a href="#" class="product-card">
+          <a href="#" class="product-card reveal">
             <div class="card-image">
               <img
                 src="media/Termekink/katalogus-cards/pergolak.png"
@@ -326,5 +332,6 @@
     <footer>
       <p>&copy; 2023 Sardiablak Kft. Minden jog fenntartva.</p>
     </footer>
+    <script src="src/script.js"></script>
   </body>
 </html>

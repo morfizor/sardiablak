@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beltéri MDF és Festett Ajtók - Sardiablak</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="src/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/fav/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="src/fav/apple-touch-icon.png">
+    <link rel="icon" href="src/fav/favicon.ico">
+    <style>
+      .pdf-download-box {
+        background: #f8f9fa;
+        border: 2px dashed #0056b3;
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        margin: 40px 0;
+      }
+      .pdf-download-box h3 {
+        margin-bottom: 15px;
+        color: #333;
+      }
+      .btn-pdf {
+        background: #dc3545;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 5px;
+        font-weight: bold;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.3s;
+      }
+      .btn-pdf:hover {
+        background: #c82333;
+        transform: scale(1.05);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- FEJLÉC -->
+    <header>
+      <div class="container header-container">
+        <a href="index.html" class="logo">SARDI<span>ABLAK</span></a>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Kezdőlap</a></li>
+            <li><a href="termekeink.html" class="active">Termékek</a></li>
+            <li><a href="referencia.html">Referencia</a></li>
+            <li><a href="index.html#kontakt">Kapcsolat</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ALOLDAL HERO SZEKCIÓ -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Festett MDF Beltéri Ajtók</h1>
+        <p>Egyedi stílus és tökéletes formatartás</p>
+      </div>
+    </section>
+
+    <!-- TARTALOM SZEKCIÓ -->
+    <section id="product-page">
+      <div class="container">
+        <!-- Vissza gomb -->
+        <a href="termekeink.html" class="back-link"><i class="fas fa-arrow-left"></i> Vissza a termékekhez</a>
+
+        <!-- Általános bevezető -->
+        <div class="product-intro">
+          <h2>A Modern Elegancia Megoldása</h2>
+          <p class="lead-text">
+            A hagyományos, festett nyílászárók kedvelőinek gyakran okoz bosszúságot a valódi fából készített ajtók vetemedése. A festett MDF ajtók hatékony, és kedvező árú megoldást jelentenek erre a problémára.
+          </p>
+          
+          <div class="energy-box">
+            <h3><i class="fas fa-microscope"></i> Miért az MDF?</h3>
+            <p>
+                Az MDF kiválóan megmunkálható, alaktartó anyag, amely nem érzékeny a páratartalom változására. Az ajtó plasztikus mintázatát precíziós CNC marással alakítjuk ki, a végleges, gyönyörű felületet pedig minőségi porszórt fedőfesték alkalmazásával érjük el.
+            </p>
+          </div>
+        </div>
+
+        <!-- Előnyök ikonokkal (Grid) -->
+        <div class="features-grid reveal">
+            <div class="feature-card">
+                <i class="fas fa-palette"></i>
+                <h3>Bármilyen színben</h3>
+                <p>A RAL skála bármely színében rendelhető, felár ellenében akár magasfényű kivitelben is.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-piggy-bank"></i>
+                <h3>Költséghatékony</h3>
+                <p>Jelentősen kedvezőbb árú megoldás a festett tömörfa nyílászárókhoz képest, azonos esztétikai élmény mellett.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-pencil-ruler"></i>
+                <h3>Egyedi mintázat</h3>
+                <p>A CNC technológiának köszönhetően a mintázat akár egyedi elképzelések alapján is kivitelezhető.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-gem"></i>
+                <h3>Prémium felület</h3>
+                <p>Rendkívül hatásos, gyönyörű porszórt felület, amely minden modern otthon dísze lehet.</p>
+            </div>
+        </div>
+
+        <!-- PDF Katalógus Szekció -->
+        <div class="pdf-download-box">
+            <h3>Tekintse meg modellválasztékunkat!</h3>
+            <p>Töltse le aktuális termékplakátunkat, ahol számos modell közül választhat:</p>
+            <a href="media/Termekink/modellek_17_2022_09_small-1%20belt%C3%A9ri%20ajt%C3%B3%20plak%C3%A1t-1.pdf" target="_blank" class="btn-pdf">
+                <i class="fas fa-file-pdf"></i> Modellek megtekintése (PDF)
+            </a>
+        </div>
+
+        <hr class="divider">
+
+        <!-- TERMÉK VARIÁCIÓK / RÉSZLETEK -->
+        <h2 class="variants-title">Technológia és Megbízhatóság</h2>
+
+        <div class="product-variant reveal">
+            <div class="variant-image">
+                <img src="media/Termekink/katalogus-cards/belteri_mdf_festett_ajtok.png" alt="Festett MDF beltéri ajtó">
+            </div>
+            <div class="variant-info">
+                <h3>Precíziós gyártás</h3>
+                <p>Minden MDF ajtónk a legmodernebb CNC gépeken készül, biztosítva a milliméter pontos illeszkedést és a tökéletes felületi minőséget.</p>
+                <ul class="variant-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Veteménymentes:</strong> Nem hajlik, nem tekeredik az évek során sem.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Selyemfényű vagy matt:</strong> Választható fényességi fokozatok.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Homogén felület:</strong> Nincsenek látható illesztések vagy faerezet-hibák.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Hosszú élettartam:</strong> Ellenálló és tartós festékréteg.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CTA Gomb -->
+        <div class="cta-section">
+            <h2>Megtalálta álmai színét?</h2>
+            <p>Kérjen egyedi ajánlatot festett MDF beltéri ajtóinkra, bármilyen RAL színben!</p>
+            <a href="index.html#kontakt" class="btn btn-large">Ajánlatkérés Küldése</a>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2023 Sardiablak Kft. Minden jog fenntartva.</p>
+    </footer>
+    <script src="src/script.js"></script>
+  </body>
+</html>
