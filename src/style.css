@@ -593,38 +593,93 @@ footer p {
   }
 
   nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 80%;
-    height: 100vh;
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: -15px 0 30px rgba(11, 37, 69, 0.15);
+    position: absolute;
+    top: calc(var(--header-height) + 12px);
+    right: 24px;
+    width: calc(100% - 48px);
+    max-width: 300px;
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--color-border);
+    padding: 12px 8px;
+    z-index: 10000;
+    
+    /* Animation */
+    opacity: 0;
+    transform: translateY(-15px);
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   nav.active {
-    right: 0;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 
   nav ul {
     flex-direction: column;
-    text-align: center;
+    align-items: stretch;
+    width: 100%;
   }
 
   nav ul li {
-    margin: 20px 0;
+    margin: 4px 0;
     margin-left: 0;
+    width: 100%;
   }
 
   nav ul li a {
-    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.05rem;
+    font-weight: 500;
+    padding: 12px 16px;
+    color: var(--color-text-main);
+    border-radius: var(--radius-sm);
+    transition: var(--transition-smooth);
+    position: relative;
+  }
+  
+  nav ul li a::after {
+    display: none;
+  }
+
+  nav ul li a:hover,
+  nav ul li a.active {
+    background-color: var(--color-accent-light);
+    color: var(--color-accent);
+    font-weight: 600;
+  }
+
+  /* Custom FontAwesome Icons for Mobile Menu */
+  nav ul li a::before {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    margin-right: 12px;
+    font-size: 1rem;
+    width: 20px;
+    display: inline-block;
+    text-align: center;
+    color: var(--color-accent);
+    transition: var(--transition-smooth);
+  }
+  
+  nav ul li a[href*="kezdolap"]::before {
+    content: '\f015'; /* fa-home */
+  }
+  nav ul li a[href*="rolunk"]::before {
+    content: '\f05a'; /* fa-info-circle */
+  }
+  nav ul li a[href*="referencia"]::before {
+    content: '\f03e'; /* fa-image */
+  }
+  nav ul li a[href*="termekeink"]::before {
+    content: '\f009'; /* fa-th-large */
+  }
+  nav ul li a[href*="kontakt"]::before {
+    content: '\f0e0'; /* fa-envelope */
   }
 
   #kezdolap {
